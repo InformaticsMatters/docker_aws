@@ -5,8 +5,8 @@ RUN yum -y install epel-release &&\
  yum update -y &&\
  yum install -y python-pip groff &&\
  pip install awscli &&\
- rm -rf /var/cache/yum &&\
- yum clean all
+ yum clean all &&\
+ rm -rf /var/cache/yum
 
 RUN useradd -m centos -s /bin/bash
 USER centos
